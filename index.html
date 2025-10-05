@@ -4,91 +4,78 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🏮 Bài 1–5 — Từ vựng Hán ngữ | CN–Pinyin–VI–EN</title>
-  <meta name="description" content="Bài 1 từ vựng: chữ Hán, pinyin, nghĩa tiếng Việt, tiếng Anh và ví dụ minh hoạ."/>
+  <meta name="description" content="Từ vựng Hán ngữ: chữ Hán, pinyin, nghĩa VI/EN và ví dụ. "/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b1020;      /* nền xanh đen */
-      --card: #121936;    /* card xanh tím */
-      --muted:#96a0c7;    /* chữ phụ */
-      --text:#e6ecff;     /* chữ chính */
-      --accent:#7c3aed;   /* tím */
-      --accent-2:#22d3ee; /* cyan */
-      --good:#16a34a;     /* xanh lá */
-      --warn:#f59e0b;     /* vàng */
-      --danger:#ef4444;   /* đỏ */
-      --radius: 18px;
-      --radius-sm: 12px;
-      --shadow: 0 10px 30px rgba(20, 25, 55, .6), 0 4px 18px rgba(20, 25, 55, .35);
+      --bg:#0b1020; --card:#121936; --muted:#96a0c7; --text:#e6ecff;
+      --accent:#7c3aed; --accent-2:#22d3ee; --radius:18px; --radius-sm:12px;
+      --shadow:0 10px 30px rgba(20,25,55,.6), 0 4px 18px rgba(20,25,55,.35);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box} html,body{height:100%}
     body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      color:var(--text); background: radial-gradient(1200px 600px at 10% -10%, #1a2352, transparent 60%),
-                         radial-gradient(1200px 600px at 110% 10%, #0b2a3e, transparent 50%),
-                         linear-gradient(180deg, #090d1c 0%, #0b1020 100%);
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2352, transparent 60%),
+                  radial-gradient(1200px 600px at 110% 10%, #0b2a3e, transparent 50%),
+                  linear-gradient(180deg, #090d1c 0%, #0b1020 100%);
       letter-spacing:.2px;
     }
-    header{
-      position:sticky; top:0; z-index:10; backdrop-filter: blur(10px);
-      background: linear-gradient(180deg, rgba(9,13,28,.75), rgba(9,13,28,.35));
-      border-bottom: 1px solid rgba(124,58,237,.25);
-    }
-    .container{max-width:1100px; margin:0 auto; padding: 18px 20px;}
+    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(10px);
+      background:linear-gradient(180deg, rgba(9,13,28,.75), rgba(9,13,28,.35));
+      border-bottom:1px solid rgba(124,58,237,.25);}
+    .container{max-width:1100px; margin:0 auto; padding:18px 20px;}
     .hero{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
-    .logo{
-      width:48px; height:48px; border-radius:14px; display:grid; place-items:center; 
-      background: conic-gradient(from 210deg, var(--accent), var(--accent-2), var(--accent));
-      box-shadow: 0 6px 16px rgba(124,58,237,.45);
-      font-size:24px;
-    }
-    h1{margin:0; font-weight:800; font-size: clamp(22px, 3.2vw, 30px);}
+    .logo{width:48px; height:48px; border-radius:14px; display:grid; place-items:center;
+      background:conic-gradient(from 210deg, var(--accent), var(--accent-2), var(--accent));
+      box-shadow:0 6px 16px rgba(124,58,237,.45); font-size:24px;}
+    h1{margin:0; font-weight:800; font-size:clamp(22px,3.2vw,30px)}
     .sub{color:var(--muted); margin-top:4px; font-size:14px}
 
     .toolbar{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
-    .tool,.chip{
-      display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius: var(--radius-sm);
-      background: rgba(124,58,237,.16); border:1px solid rgba(124,58,237,.4); color:#e9e5ff;
-      cursor:pointer; user-select:none; transition: .2s transform, .2s background;
-    }
-    .tool:hover{transform: translateY(-1px); background: rgba(124,58,237,.24)}
-    .tool[data-active="false"]{opacity:.65; background: rgba(124,58,237,.1)}
-    .search{flex:1 1 260px; display:flex; align-items:center; gap:10px; background: rgba(255,255,255,.06);
-            border:1px solid rgba(255,255,255,.14); border-radius: var(--radius-sm); padding:10px 12px}
+    .tool,.chip{display:inline-flex; align-items:center; gap:8px; padding:10px 12px;
+      border-radius:var(--radius-sm); background:rgba(124,58,237,.16); border:1px solid rgba(124,58,237,.4);
+      color:#e9e5ff; cursor:pointer; user-select:none; transition:.2s transform,.2s background;}
+    .tool:hover{transform:translateY(-1px); background:rgba(124,58,237,.24)}
+    .tool[data-active="false"]{opacity:.65; background:rgba(124,58,237,.1)}
+    .search{flex:1 1 260px; display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14); border-radius:var(--radius-sm); padding:10px 12px}
     .search input{width:100%; background:transparent; outline:0; border:0; color:var(--text); font-size:14px}
 
     main{padding:28px 20px}
-    .grid{max-width:1100px; margin:0 auto; display:grid; gap:16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));}
+    .grid{max-width:1100px; margin:0 auto; display:grid; gap:16px;
+      grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));}
 
-    .card{
-      border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.09); padding:18px; box-shadow: var(--shadow);
-    }
-    .han{font-family: "Noto Sans SC", Inter, sans-serif; font-size: 36px; font-weight:700; letter-spacing:.5px}
+    .card{border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.09); padding:18px; box-shadow:var(--shadow)}
+    .han{font-family:"Noto Sans SC",Inter,sans-serif; font-size:36px; font-weight:700; letter-spacing:.5px}
     .pinyin{color:#cfe8ff; font-weight:600; margin-top:4px}
-    .mean{margin-top:6px; font-size: 14px; color:#e6f9ff}
+    .mean{margin-top:6px; font-size:14px; color:#e6f9ff}
     .flex-row{display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.18); color:#d7e0ff; background: rgba(255,255,255,.06)}
+    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.18); color:#d7e0ff; background:rgba(255,255,255,.06)}
 
-    .ex{margin-top:12px; padding:12px; border-radius:12px; background: rgba(34,211,238,.1); border:1px dashed rgba(34,211,238,.35)}
-    .ex .cn{font-family:"Noto Sans SC", Inter, sans-serif; font-weight:600}
-    .ex .py{color:#bde7ff}
-    .ex .vi{color:#e0ffe0}
-    .ex .en{color:#ffe9bd}
+    /* Loa (TTS) */
+    .icon-btn{display:inline-grid; place-items:center; width:36px; height:36px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.06);
+      cursor:pointer; transition:.2s transform,.2s background}
+    .icon-btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.12)}
+    .icon-row{display:flex; align-items:center; gap:10px}
+
+    .ex{margin-top:12px; padding:12px; border-radius:12px; background:rgba(34,211,238,.1); border:1px dashed rgba(34,211,238,.35)}
+    .ex .cn{font-family:"Noto Sans SC",Inter,sans-serif; font-weight:600}
+    .ex .py{color:#bde7ff} .ex .vi{color:#e0ffe0} .ex .en{color:#ffe9bd}
 
     .muted{color:var(--muted); font-size:12px}
     .footer{color:var(--muted); text-align:center; padding:40px 20px; border-top:1px solid rgba(255,255,255,.08)}
-
     .hide{display:none}
 
-    /* Print-friendly */
     @media print{
-      header,.toolbar,.search{display:none !important}
+      header,.toolbar,.search{display:none!important}
       body{background:#fff; color:#000}
-      .card{break-inside: avoid; box-shadow:none; border:1px solid #ddd}
+      .card{break-inside:avoid; box-shadow:none; border:1px solid #ddd}
       .ex{border-color:#ddd; background:#fafafa}
     }
   </style>
@@ -100,12 +87,14 @@
         <div class="logo" aria-hidden>🏮</div>
         <div>
           <h1>Bài 1–5 — Từ vựng Hán ngữ</h1>
-          <div class="sub">CN · Pinyin · VI · EN · Ví dụ minh hoạ — Sẵn sàng deploy trên GitHub Pages</div>
+          <div class="sub">CN · Pinyin · VI · EN · Ví dụ minh hoạ — Có đọc to (TTS) — GitHub Pages</div>
         </div>
       </div>
       <div class="toolbar" role="group" aria-label="Bộ công cụ hiển thị">
         <label class="search" title="Tìm kiếm theo chữ, pinyin hoặc nghĩa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M21 21l-4.35-4.35" stroke="#c9d3ff" stroke-width="1.6" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="#c9d3ff" stroke-width="1.6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M21 21l-4.35-4.35" stroke="#c9d3ff" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="11" cy="11" r="7" stroke="#c9d3ff" stroke-width="1.6"/></svg>
           <input id="q" placeholder="Tìm: 你, nǐ, bạn, hello..." />
         </label>
         <button id="t-py" class="tool" data-active="true">Pinyin</button>
@@ -117,119 +106,117 @@
     </div>
   </header>
 
-  <main>
-    <div class="grid" id="grid" aria-live="polite"></div>
-  </main>
+  <main><div class="grid" id="grid" aria-live="polite"></div></main>
 
   <footer class="footer">
     <div>Made with ❤ for learners. <code>thanhvd1501.github.io</code>.</div>
   </footer>
 
   <script>
-    // ======= Data =======
+    // ======= Data (Bài 1–5) =======
     const ITEMS = [
-  // ==== Bài 1 ====
-  { han: "你", py: "nǐ", vi: "bạn", en: "you", ex: { cn: "你好吗？", py: "nǐ hǎo ma?", vi: "Bạn khỏe không?", en: "How are you?" } },
-  { han: "好", py: "hǎo", vi: "tốt", en: "good", ex: { cn: "我很好。", py: "wǒ hěn hǎo.", vi: "Tôi rất tốt.", en: "I'm fine." } },
-  { han: "你好", py: "nǐ hǎo", vi: "xin chào", en: "hello", ex: { cn: "你好！", py: "nǐ hǎo!", vi: "Xin chào!", en: "Hello!" } },
-  { han: "一", py: "yī", vi: "một", en: "one", ex: { cn: "我有一个朋友。", py: "wǒ yǒu yí gè péngyou.", vi: "Tôi có một người bạn.", en: "I have one friend." } },
-  { han: "五", py: "wǔ", vi: "năm", en: "five", ex: { cn: "我家有五口人。", py: "wǒ jiā yǒu wǔ kǒu rén.", vi: "Nhà chúng tôi có năm người.", en: "There are five people in our family." } },
-  { han: "八", py: "bā", vi: "tám", en: "eight", ex: { cn: "他八岁。", py: "tā bā suì.", vi: "Cậu ấy tám tuổi.", en: "He is eight years old." } },
-  { han: "大", py: "dà", vi: "to, lớn", en: "big", ex: { cn: "这只狗很大。", py: "zhè zhī gǒu hěn dà.", vi: "Con chó này rất to.", en: "This dog is big." } },
-  { han: "不", py: "bù", vi: "không", en: "not", ex: { cn: "我不是老师。", py: "wǒ bú shì lǎoshī.", vi: "Tôi không phải là giáo viên.", en: "I'm not a teacher." } },
-  { han: "口", py: "kǒu", vi: "miệng; lượng từ (người trong nhà)", en: "mouth; classifier for family members", ex: { cn: "我们家有三口人。", py: "wǒmen jiā yǒu sān kǒu rén.", vi: "Nhà chúng tôi có ba người.", en: "There are three people in our family." } },
-  { han: "白", py: "bái", vi: "trắng", en: "white", ex: { cn: "白云在天上。", py: "bái yún zài tiān shang.", vi: "Mây trắng ở trên trời.", en: "White clouds are in the sky." } },
-  { han: "女", py: "nǚ", vi: "phụ nữ", en: "female; woman", ex: { cn: "她是女学生。", py: "tā shì nǚ xuéshēng.", vi: "Cô ấy là nữ sinh.", en: "She is a female student." } },
-  { han: "马", py: "mǎ", vi: "ngựa", en: "horse", ex: { cn: "我喜欢马。", py: "wǒ xǐhuan mǎ.", vi: "Tôi thích ngựa.", en: "I like horses." } },
+      // ==== Bài 1 ====
+      { han: "你", py: "nǐ", vi: "bạn", en: "you", ex: { cn: "你好吗？", py: "nǐ hǎo ma?", vi: "Bạn khỏe không?", en: "How are you?" } },
+      { han: "好", py: "hǎo", vi: "tốt", en: "good", ex: { cn: "我很好。", py: "wǒ hěn hǎo.", vi: "Tôi rất tốt.", en: "I'm fine." } },
+      { han: "你好", py: "nǐ hǎo", vi: "xin chào", en: "hello", ex: { cn: "你好！", py: "nǐ hǎo!", vi: "Xin chào!", en: "Hello!" } },
+      { han: "一", py: "yī", vi: "một", en: "one", ex: { cn: "我有一个朋友。", py: "wǒ yǒu yí gè péngyou.", vi: "Tôi có một người bạn.", en: "I have one friend." } },
+      { han: "五", py: "wǔ", vi: "năm", en: "five", ex: { cn: "我家有五口人。", py: "wǒ jiā yǒu wǔ kǒu rén.", vi: "Nhà chúng tôi có năm người.", en: "There are five people in our family." } },
+      { han: "八", py: "bā", vi: "tám", en: "eight", ex: { cn: "他八岁。", py: "tā bā suì.", vi: "Cậu ấy tám tuổi.", en: "He is eight years old." } },
+      { han: "大", py: "dà", vi: "to, lớn", en: "big", ex: { cn: "这只狗很大。", py: "zhè zhī gǒu hěn dà.", vi: "Con chó này rất to.", en: "This dog is big." } },
+      { han: "不", py: "bù", vi: "không", en: "not", ex: { cn: "我不是老师。", py: "wǒ bú shì lǎoshī.", vi: "Tôi không phải là giáo viên.", en: "I'm not a teacher." } },
+      { han: "口", py: "kǒu", vi: "miệng; lượng từ (người trong nhà)", en: "mouth; classifier for family members", ex: { cn: "我们家有三口人。", py: "wǒmen jiā yǒu sān kǒu rén.", vi: "Nhà chúng tôi có ba người.", en: "There are three people in our family." } },
+      { han: "白", py: "bái", vi: "trắng", en: "white", ex: { cn: "白云在天上。", py: "bái yún zài tiān shang.", vi: "Mây trắng ở trên trời.", en: "White clouds are in the sky." } },
+      { han: "女", py: "nǚ", vi: "phụ nữ", en: "female; woman", ex: { cn: "她是女学生。", py: "tā shì nǚ xuéshēng.", vi: "Cô ấy là nữ sinh.", en: "She is a female student." } },
+      { han: "马", py: "mǎ", vi: "ngựa", en: "horse", ex: { cn: "我喜欢马。", py: "wǒ xǐhuan mǎ.", vi: "Tôi thích ngựa.", en: "I like horses." } },
 
-  // ==== Bài 2 ====
-  { han: "忙", py: "máng", vi: "bận", en: "busy", ex: { cn: "你忙吗？", py: "nǐ máng ma?", vi: "Bạn bận không?", en: "Are you busy?" } },
-  { han: "吗", py: "ma", vi: "trợ từ nghi vấn", en: "question particle", ex: { cn: "你好吗？", py: "nǐ hǎo ma?", vi: "Bạn khỏe không?", en: "How are you?" } },
-  { han: "很", py: "hěn", vi: "rất", en: "very", ex: { cn: "我很好。", py: "wǒ hěn hǎo.", vi: "Tôi rất tốt.", en: "I'm very well." } },
-  { han: "汉语", py: "Hànyǔ", vi: "tiếng Hán", en: "Chinese language", ex: { cn: "我学汉语。", py: "wǒ xué Hànyǔ.", vi: "Tôi học tiếng Hán.", en: "I study Chinese." } },
-  { han: "难", py: "nán", vi: "khó", en: "difficult", ex: { cn: "汉语不难。", py: "Hànyǔ bù nán.", vi: "Tiếng Hán không khó.", en: "Chinese is not difficult." } },
-  { han: "太", py: "tài", vi: "quá", en: "too; overly", ex: { cn: "太好了！", py: "tài hǎo le!", vi: "Tuyệt quá!", en: "Great!" } },
-  { han: "爸爸", py: "bàba", vi: "cha", en: "dad", ex: { cn: "我爸爸是老师。", py: "wǒ bàba shì lǎoshī.", vi: "Bố tôi là giáo viên.", en: "My dad is a teacher." } },
-  { han: "妈妈", py: "māma", vi: "mẹ", en: "mum", ex: { cn: "我妈妈很漂亮。", py: "wǒ māma hěn piàoliang.", vi: "Mẹ tôi rất đẹp.", en: "My mom is beautiful." } },
-  { han: "他", py: "tā", vi: "anh ấy", en: "he", ex: { cn: "他是学生。", py: "tā shì xuéshēng.", vi: "Anh ấy là học sinh.", en: "He is a student." } },
-  { han: "她", py: "tā", vi: "cô ấy", en: "she", ex: { cn: "她很好。", py: "tā hěn hǎo.", vi: "Cô ấy rất tốt.", en: "She is fine." } },
-  { han: "男", py: "nán", vi: "nam", en: "male", ex: { cn: "他是男老师。", py: "tā shì nán lǎoshī.", vi: "Anh ấy là giáo viên nam.", en: "He is a male teacher." } },
-  { han: "哥哥", py: "gēge", vi: "anh trai", en: "elder brother", ex: { cn: "我有一个哥哥。", py: "wǒ yǒu yí gè gēge.", vi: "Tôi có một anh trai.", en: "I have an elder brother." } },
-  { han: "弟弟", py: "dìdi", vi: "em trai", en: "younger brother", ex: { cn: "弟弟很可爱。", py: "dìdi hěn kě'ài.", vi: "Em trai rất dễ thương.", en: "My younger brother is cute." } },
-  { han: "妹妹", py: "mèimei", vi: "em gái", en: "younger sister", ex: { cn: "妹妹在家。", py: "mèimei zài jiā.", vi: "Em gái ở nhà.", en: "Younger sister is at home." } },
+      // ==== Bài 2 ====
+      { han: "忙", py: "máng", vi: "bận", en: "busy", ex: { cn: "你忙吗？", py: "nǐ máng ma?", vi: "Bạn bận không?", en: "Are you busy?" } },
+      { han: "吗", py: "ma", vi: "trợ từ nghi vấn", en: "question particle", ex: { cn: "你好吗？", py: "nǐ hǎo ma?", vi: "Bạn khỏe không?", en: "How are you?" } },
+      { han: "很", py: "hěn", vi: "rất", en: "very", ex: { cn: "我很好。", py: "wǒ hěn hǎo.", vi: "Tôi rất tốt.", en: "I'm very well." } },
+      { han: "汉语", py: "Hànyǔ", vi: "tiếng Hán", en: "Chinese language", ex: { cn: "我学汉语。", py: "wǒ xué Hànyǔ.", vi: "Tôi học tiếng Hán.", en: "I study Chinese." } },
+      { han: "难", py: "nán", vi: "khó", en: "difficult", ex: { cn: "汉语不难。", py: "Hànyǔ bù nán.", vi: "Tiếng Hán không khó.", en: "Chinese is not difficult." } },
+      { han: "太", py: "tài", vi: "quá", en: "too; overly", ex: { cn: "太好了！", py: "tài hǎo le!", vi: "Tuyệt quá!", en: "Great!" } },
+      { han: "爸爸", py: "bàba", vi: "cha", en: "dad", ex: { cn: "我爸爸是老师。", py: "wǒ bàba shì lǎoshī.", vi: "Bố tôi là giáo viên.", en: "My dad is a teacher." } },
+      { han: "妈妈", py: "māma", vi: "mẹ", en: "mum", ex: { cn: "我妈妈很漂亮。", py: "wǒ māma hěn piàoliang.", vi: "Mẹ tôi rất đẹp.", en: "My mom is beautiful." } },
+      { han: "他", py: "tā", vi: "anh ấy", en: "he", ex: { cn: "他是学生。", py: "tā shì xuéshēng.", vi: "Anh ấy là học sinh.", en: "He is a student." } },
+      { han: "她", py: "tā", vi: "cô ấy", en: "she", ex: { cn: "她很好。", py: "tā hěn hǎo.", vi: "Cô ấy rất tốt.", en: "She is fine." } },
+      { han: "男", py: "nán", vi: "nam", en: "male", ex: { cn: "他是男老师。", py: "tā shì nán lǎoshī.", vi: "Anh ấy là giáo viên nam.", en: "He is a male teacher." } },
+      { han: "哥哥", py: "gēge", vi: "anh trai", en: "elder brother", ex: { cn: "我有一个哥哥。", py: "wǒ yǒu yí gè gēge.", vi: "Tôi có một anh trai.", en: "I have an elder brother." } },
+      { han: "弟弟", py: "dìdi", vi: "em trai", en: "younger brother", ex: { cn: "弟弟很可爱。", py: "dìdi hěn kě'ài.", vi: "Em trai rất dễ thương.", en: "My younger brother is cute." } },
+      { han: "妹妹", py: "mèimei", vi: "em gái", en: "younger sister", ex: { cn: "妹妹在家。", py: "mèimei zài jiā.", vi: "Em gái ở nhà.", en: "Younger sister is at home." } },
 
-  // ==== Bài 3 ====
-  { han: "学", py: "xué", vi: "học", en: "to learn; to study", ex: { cn: "我学汉语。", py: "wǒ xué Hànyǔ.", vi: "Tôi học tiếng Hán.", en: "I study Chinese." } },
-  { han: "英语", py: "Yīngyǔ", vi: "tiếng Anh", en: "English (language)", ex: { cn: "他学英语。", py: "tā xué Yīngyǔ.", vi: "Anh ấy học tiếng Anh.", en: "He studies English." } },
-  { han: "阿拉伯语", py: "Ālābóyǔ", vi: "tiếng Ả Rập", en: "Arabic (language)", ex: { cn: "他会说阿拉伯语。", py: "tā huì shuō Ālābóyǔ.", vi: "Anh ấy biết nói tiếng Ả Rập.", en: "He can speak Arabic." } },
-  { han: "德语", py: "Déyǔ", vi: "tiếng Đức", en: "German (language)", ex: { cn: "我想学德语。", py: "wǒ xiǎng xué Déyǔ.", vi: "Tôi muốn học tiếng Đức.", en: "I want to learn German." } },
-  { han: "俄语", py: "Éyǔ", vi: "tiếng Nga", en: "Russian (language)", ex: { cn: "她会说俄语。", py: "tā huì shuō Éyǔ.", vi: "Cô ấy biết nói tiếng Nga.", en: "She can speak Russian." } },
-  { han: "法语", py: "Fǎyǔ", vi: "tiếng Pháp", en: "French (language)", ex: { cn: "我姐姐学法语。", py: "wǒ jiějie xué Fǎyǔ.", vi: "Chị tôi học tiếng Pháp.", en: "My sister studies French." } },
-  { han: "韩语", py: "Hánguóyǔ", vi: "tiếng Hàn", en: "Korean (language)", ex: { cn: "你学韩语吗？", py: "nǐ xué Hánguóyǔ ma?", vi: "Bạn học tiếng Hàn à?", en: "Do you study Korean?" } },
-  { han: "日语", py: "Rìyǔ", vi: "tiếng Nhật", en: "Japanese (language)", ex: { cn: "我朋友会说日语。", py: "wǒ péngyou huì shuō Rìyǔ.", vi: "Bạn tôi biết nói tiếng Nhật.", en: "My friend can speak Japanese." } },
-  { han: "西班牙语", py: "Xībānyáyǔ", vi: "tiếng Tây Ban Nha", en: "Spanish (language)", ex: { cn: "他在学西班牙语。", py: "tā zài xué Xībānyáyǔ.", vi: "Anh ấy đang học tiếng Tây Ban Nha.", en: "He is studying Spanish." } },
-  { han: "对", py: "duì", vi: "đúng", en: "right; correct", ex: { cn: "你说得对。", py: "nǐ shuō de duì.", vi: "Bạn nói đúng.", en: "You are right." } },
-  { han: "明天", py: "míngtiān", vi: "ngày mai", en: "tomorrow", ex: { cn: "明天见。", py: "míngtiān jiàn.", vi: "Hẹn gặp ngày mai.", en: "See you tomorrow." } },
-  { han: "见", py: "jiàn", vi: "gặp", en: "to see", ex: { cn: "我见他了。", py: "wǒ jiàn tā le.", vi: "Tôi đã gặp anh ấy.", en: "I met him." } },
-  { han: "去", py: "qù", vi: "đi", en: "to go", ex: { cn: "我去学校。", py: "wǒ qù xuéxiào.", vi: "Tôi đi học.", en: "I go to school." } },
-  { han: "邮局", py: "yóujú", vi: "bưu điện", en: "post office", ex: { cn: "邮局在那儿。", py: "yóujú zài nàr.", vi: "Bưu điện ở đằng kia.", en: "The post office is over there." } },
-  { han: "寄", py: "jì", vi: "gửi", en: "to send; to mail", ex: { cn: "我去邮局寄信。", py: "wǒ qù yóujú jì xìn.", vi: "Tôi đi bưu điện gửi thư.", en: "I go to the post office to send a letter." } },
-  { han: "信", py: "xìn", vi: "thư", en: "letter; mail", ex: { cn: "我写信给你。", py: "wǒ xiě xìn gěi nǐ.", vi: "Tôi viết thư cho bạn.", en: "I write a letter to you." } },
-  { han: "银行", py: "yínháng", vi: "ngân hàng", en: "bank", ex: { cn: "我去银行取钱。", py: "wǒ qù yínháng qǔ qián.", vi: "Tôi đi ngân hàng rút tiền.", en: "I go to the bank to withdraw money." } },
-  { han: "取", py: "qǔ", vi: "rút, lấy", en: "to draw; to take", ex: { cn: "我取了五百块。", py: "wǒ qǔ le wǔ bǎi kuài.", vi: "Tôi rút năm trăm tệ.", en: "I withdrew 500 yuan." } },
-  { han: "钱", py: "qián", vi: "tiền", en: "money", ex: { cn: "他有很多钱。", py: "tā yǒu hěn duō qián.", vi: "Anh ấy có nhiều tiền.", en: "He has a lot of money." } },
-  { han: "六", py: "liù", vi: "sáu", en: "six", ex: { cn: "我有六支笔。", py: "wǒ yǒu liù zhī bǐ.", vi: "Tôi có sáu cây bút.", en: "I have six pens." } },
-  { han: "七", py: "qī", vi: "bảy", en: "seven", ex: { cn: "我们七点见。", py: "wǒmen qī diǎn jiàn.", vi: "Chúng ta gặp lúc bảy giờ.", en: "See you at seven." } },
-  { han: "九", py: "jiǔ", vi: "chín", en: "nine", ex: { cn: "现在九点。", py: "xiànzài jiǔ diǎn.", vi: "Bây giờ là chín giờ.", en: "It is nine o'clock." } },
+      // ==== Bài 3 ====
+      { han: "学", py: "xué", vi: "học", en: "to learn; to study", ex: { cn: "我学汉语。", py: "wǒ xué Hànyǔ.", vi: "Tôi học tiếng Hán.", en: "I study Chinese." } },
+      { han: "英语", py: "Yīngyǔ", vi: "tiếng Anh", en: "English (language)", ex: { cn: "他学英语。", py: "tā xué Yīngyǔ.", vi: "Anh ấy học tiếng Anh.", en: "He studies English." } },
+      { han: "阿拉伯语", py: "Ālābóyǔ", vi: "tiếng Ả Rập", en: "Arabic (language)", ex: { cn: "他会说阿拉伯语。", py: "tā huì shuō Ālābóyǔ.", vi: "Anh ấy biết nói tiếng Ả Rập.", en: "He can speak Arabic." } },
+      { han: "德语", py: "Déyǔ", vi: "tiếng Đức", en: "German (language)", ex: { cn: "我想学德语。", py: "wǒ xiǎng xué Déyǔ.", vi: "Tôi muốn học tiếng Đức.", en: "I want to learn German." } },
+      { han: "俄语", py: "Éyǔ", vi: "tiếng Nga", en: "Russian (language)", ex: { cn: "她会说俄语。", py: "tā huì shuō Éyǔ.", vi: "Cô ấy biết nói tiếng Nga.", en: "She can speak Russian." } },
+      { han: "法语", py: "Fǎyǔ", vi: "tiếng Pháp", en: "French (language)", ex: { cn: "我姐姐学法语。", py: "wǒ jiějie xué Fǎyǔ.", vi: "Chị tôi học tiếng Pháp.", en: "My sister studies French." } },
+      { han: "韩语", py: "Hánguóyǔ", vi: "tiếng Hàn", en: "Korean (language)", ex: { cn: "你学韩语吗？", py: "nǐ xué Hánguóyǔ ma?", vi: "Bạn học tiếng Hàn à?", en: "Do you study Korean?" } },
+      { han: "日语", py: "Rìyǔ", vi: "tiếng Nhật", en: "Japanese (language)", ex: { cn: "我朋友会说日语。", py: "wǒ péngyou huì shuō Rìyǔ.", vi: "Bạn tôi biết nói tiếng Nhật.", en: "My friend can speak Japanese." } },
+      { han: "西班牙语", py: "Xībānyáyǔ", vi: "tiếng Tây Ban Nha", en: "Spanish (language)", ex: { cn: "他在学西班牙语。", py: "tā zài xué Xībānyáyǔ.", vi: "Anh ấy đang học tiếng Tây Ban Nha.", en: "He is studying Spanish." } },
+      { han: "对", py: "duì", vi: "đúng", en: "right; correct", ex: { cn: "你说得对。", py: "nǐ shuō de duì.", vi: "Bạn nói đúng.", en: "You are right." } },
+      { han: "明天", py: "míngtiān", vi: "ngày mai", en: "tomorrow", ex: { cn: "明天见。", py: "míngtiān jiàn.", vi: "Hẹn gặp ngày mai.", en: "See you tomorrow." } },
+      { han: "见", py: "jiàn", vi: "gặp", en: "to see", ex: { cn: "我见他了。", py: "wǒ jiàn tā le.", vi: "Tôi đã gặp anh ấy.", en: "I met him." } },
+      { han: "去", py: "qù", vi: "đi", en: "to go", ex: { cn: "我去学校。", py: "wǒ qù xuéxiào.", vi: "Tôi đi học.", en: "I go to school." } },
+      { han: "邮局", py: "yóujú", vi: "bưu điện", en: "post office", ex: { cn: "邮局在那儿。", py: "yóujú zài nàr.", vi: "Bưu điện ở đằng kia.", en: "The post office is over there." } },
+      { han: "寄", py: "jì", vi: "gửi", en: "to send; to mail", ex: { cn: "我去邮局寄信。", py: "wǒ qù yóujú jì xìn.", vi: "Tôi đi bưu điện gửi thư.", en: "I go to the post office to send a letter." } },
+      { han: "信", py: "xìn", vi: "thư", en: "letter; mail", ex: { cn: "我写信给你。", py: "wǒ xiě xìn gěi nǐ.", vi: "Tôi viết thư cho bạn.", en: "I write a letter to you." } },
+      { han: "银行", py: "yínháng", vi: "ngân hàng", en: "bank", ex: { cn: "我去银行取钱。", py: "wǒ qù yínháng qǔ qián.", vi: "Tôi đi ngân hàng rút tiền.", en: "I go to the bank to withdraw money." } },
+      { han: "取", py: "qǔ", vi: "rút, lấy", en: "to draw; to take", ex: { cn: "我取了五百块。", py: "wǒ qǔ le wǔ bǎi kuài.", vi: "Tôi rút năm trăm tệ.", en: "I withdrew 500 yuan." } },
+      { han: "钱", py: "qián", vi: "tiền", en: "money", ex: { cn: "他有很多钱。", py: "tā yǒu hěn duō qián.", vi: "Anh ấy có nhiều tiền.", en: "He has a lot of money." } },
+      { han: "六", py: "liù", vi: "sáu", en: "six", ex: { cn: "我有六支笔。", py: "wǒ yǒu liù zhī bǐ.", vi: "Tôi có sáu cây bút.", en: "I have six pens." } },
+      { han: "七", py: "qī", vi: "bảy", en: "seven", ex: { cn: "我们七点见。", py: "wǒmen qī diǎn jiàn.", vi: "Chúng ta gặp lúc bảy giờ.", en: "See you at seven." } },
+      { han: "九", py: "jiǔ", vi: "chín", en: "nine", ex: { cn: "现在九点。", py: "xiànzài jiǔ diǎn.", vi: "Bây giờ là chín giờ.", en: "It is nine o'clock." } },
 
-  // ==== Bài 4 ====
-  { han: "今天", py: "jīntiān", vi: "hôm nay", en: "today", ex: { cn: "今天是星期一。", py: "jīntiān shì xīngqī yī.", vi: "Hôm nay là thứ hai.", en: "Today is Monday." } },
-  { han: "昨天", py: "zuótiān", vi: "hôm qua", en: "yesterday", ex: { cn: "昨天我去学校。", py: "zuótiān wǒ qù xuéxiào.", vi: "Hôm qua tôi đi học.", en: "I went to school yesterday." } },
-  { han: "星期", py: "xīngqī", vi: "tuần", en: "week", ex: { cn: "一个星期七天。", py: "yí gè xīngqī qī tiān.", vi: "Một tuần có bảy ngày.", en: "A week has seven days." } },
-  { han: "星期一", py: "xīngqī yī", vi: "thứ hai", en: "Monday", ex: { cn: "今天是星期一。", py: "jīntiān shì xīngqī yī.", vi: "Hôm nay là thứ hai.", en: "Today is Monday." } },
-  { han: "星期二", py: "xīngqī èr", vi: "thứ ba", en: "Tuesday", ex: { cn: "明天是星期二。", py: "míngtiān shì xīngqī èr.", vi: "Ngày mai là thứ ba.", en: "Tomorrow is Tuesday." } },
-  { han: "星期三", py: "xīngqī sān", vi: "thứ tư", en: "Wednesday", ex: { cn: "今天星期三。", py: "jīntiān xīngqī sān.", vi: "Hôm nay thứ tư.", en: "Today is Wednesday." } },
-  { han: "星期四", py: "xīngqī sì", vi: "thứ năm", en: "Thursday", ex: { cn: "星期四我有课。", py: "xīngqī sì wǒ yǒu kè.", vi: "Thứ năm tôi có tiết học.", en: "I have class on Thursday." } },
-  { han: "星期五", py: "xīngqī wǔ", vi: "thứ sáu", en: "Friday", ex: { cn: "星期五见！", py: "xīngqī wǔ jiàn!", vi: "Hẹn gặp thứ sáu!", en: "See you Friday!" } },
-  { han: "星期六", py: "xīngqī liù", vi: "thứ bảy", en: "Saturday", ex: { cn: "星期六休息。", py: "xīngqī liù xiūxi.", vi: "Thứ bảy nghỉ ngơi.", en: "Rest on Saturday." } },
-  { han: "星期天", py: "xīngqī tiān", vi: "chủ nhật", en: "Sunday", ex: { cn: "星期天去公园。", py: "xīngqī tiān qù gōngyuán.", vi: "Chủ nhật đi công viên.", en: "Go to the park on Sunday." } },
-  { han: "几", py: "jǐ", vi: "mấy; bao nhiêu", en: "how many; several", ex: { cn: "你几岁？", py: "nǐ jǐ suì?", vi: "Bạn mấy tuổi?", en: "How old are you?" } },
-  { han: "二", py: "èr", vi: "hai", en: "two", ex: { cn: "现在二点。", py: "xiànzài èr diǎn.", vi: "Bây giờ hai giờ.", en: "It's two o'clock." } },
-  { han: "三", py: "sān", vi: "ba", en: "three", ex: { cn: "我有三本书。", py: "wǒ yǒu sān běn shū.", vi: "Tôi có ba quyển sách.", en: "I have three books." } },
-  { han: "四", py: "sì", vi: "bốn", en: "four", ex: { cn: "他有四个苹果。", py: "tā yǒu sì gè píngguǒ.", vi: "Anh ấy có bốn quả táo.", en: "He has four apples." } },
-  { han: "哪儿", py: "nǎr", vi: "ở đâu", en: "where", ex: { cn: "你去哪儿？", py: "nǐ qù nǎr?", vi: "Bạn đi đâu?", en: "Where are you going?" } },
-  { han: "那儿", py: "nàr", vi: "ở kia", en: "there", ex: { cn: "银行在那儿。", py: "yínháng zài nàr.", vi: "Ngân hàng ở kia.", en: "The bank is over there." } },
-  { han: "我", py: "wǒ", vi: "tôi", en: "I; me", ex: { cn: "我是学生。", py: "wǒ shì xuéshēng.", vi: "Tôi là học sinh.", en: "I am a student." } },
-  { han: "回", py: "huí", vi: "về", en: "to go back", ex: { cn: "我回家。", py: "wǒ huí jiā.", vi: "Tôi về nhà.", en: "I go home." } },
-  { han: "学校", py: "xuéxiào", vi: "trường học", en: "school", ex: { cn: "我们学校很大。", py: "wǒmen xuéxiào hěn dà.", vi: "Trường chúng tôi rất lớn.", en: "Our school is big." } },
-  { han: "再见", py: "zàijiàn", vi: "tạm biệt", en: "goodbye", ex: { cn: "老师，再见！", py: "lǎoshī, zàijiàn!", vi: "Thầy ơi, tạm biệt!", en: "Goodbye, teacher!" } },
-  { han: "对不起", py: "duìbuqǐ", vi: "xin lỗi", en: "sorry", ex: { cn: "对不起！", py: "duìbuqǐ!", vi: "Xin lỗi!", en: "Sorry!" } },
-  { han: "没关系", py: "méi guānxi", vi: "không sao", en: "it's okay; no problem", ex: { cn: "没关系。", py: "méi guānxi.", vi: "Không sao đâu.", en: "It's okay." } },
+      // ==== Bài 4 ====
+      { han: "今天", py: "jīntiān", vi: "hôm nay", en: "today", ex: { cn: "今天是星期一。", py: "jīntiān shì xīngqī yī.", vi: "Hôm nay là thứ hai.", en: "Today is Monday." } },
+      { han: "昨天", py: "zuótiān", vi: "hôm qua", en: "yesterday", ex: { cn: "昨天我去学校。", py: "zuótiān wǒ qù xuéxiào.", vi: "Hôm qua tôi đi học.", en: "I went to school yesterday." } },
+      { han: "星期", py: "xīngqī", vi: "tuần", en: "week", ex: { cn: "一个星期七天。", py: "yí gè xīngqī qī tiān.", vi: "Một tuần có bảy ngày.", en: "A week has seven days." } },
+      { han: "星期一", py: "xīngqī yī", vi: "thứ hai", en: "Monday", ex: { cn: "今天是星期一。", py: "jīntiān shì xīngqī yī.", vi: "Hôm nay là thứ hai.", en: "Today is Monday." } },
+      { han: "星期二", py: "xīngqī èr", vi: "thứ ba", en: "Tuesday", ex: { cn: "明天是星期二。", py: "míngtiān shì xīngqī èr.", vi: "Ngày mai là thứ ba.", en: "Tomorrow is Tuesday." } },
+      { han: "星期三", py: "xīngqī sān", vi: "thứ tư", en: "Wednesday", ex: { cn: "今天星期三。", py: "jīntiān xīngqī sān.", vi: "Hôm nay thứ tư.", en: "Today is Wednesday." } },
+      { han: "星期四", py: "xīngqī sì", vi: "thứ năm", en: "Thursday", ex: { cn: "星期四我有课。", py: "xīngqī sì wǒ yǒu kè.", vi: "Thứ năm tôi có tiết học.", en: "I have class on Thursday." } },
+      { han: "星期五", py: "xīngqī wǔ", vi: "thứ sáu", en: "Friday", ex: { cn: "星期五见！", py: "xīngqī wǔ jiàn!", vi: "Hẹn gặp thứ sáu!", en: "See you Friday!" } },
+      { han: "星期六", py: "xīngqī liù", vi: "thứ bảy", en: "Saturday", ex: { cn: "星期六休息。", py: "xīngqī liù xiūxi.", vi: "Thứ bảy nghỉ ngơi.", en: "Rest on Saturday." } },
+      { han: "星期天", py: "xīngqī tiān", vi: "chủ nhật", en: "Sunday", ex: { cn: "星期天去公园。", py: "xīngqī tiān qù gōngyuán.", vi: "Chủ nhật đi công viên.", en: "Go to the park on Sunday." } },
+      { han: "几", py: "jǐ", vi: "mấy; bao nhiêu", en: "how many; several", ex: { cn: "你几岁？", py: "nǐ jǐ suì?", vi: "Bạn mấy tuổi?", en: "How old are you?" } },
+      { han: "二", py: "èr", vi: "hai", en: "two", ex: { cn: "现在二点。", py: "xiànzài èr diǎn.", vi: "Bây giờ hai giờ.", en: "It's two o'clock." } },
+      { han: "三", py: "sān", vi: "ba", en: "three", ex: { cn: "我有三本书。", py: "wǒ yǒu sān běn shū.", vi: "Tôi có ba quyển sách.", en: "I have three books." } },
+      { han: "四", py: "sì", vi: "bốn", en: "four", ex: { cn: "他有四个苹果。", py: "tā yǒu sì gè píngguǒ.", vi: "Anh ấy có bốn quả táo.", en: "He has four apples." } },
+      { han: "哪儿", py: "nǎr", vi: "ở đâu", en: "where", ex: { cn: "你去哪儿？", py: "nǐ qù nǎr?", vi: "Bạn đi đâu?", en: "Where are you going?" } },
+      { han: "那儿", py: "nàr", vi: "ở kia", en: "there", ex: { cn: "银行在那儿。", py: "yínháng zài nàr.", vi: "Ngân hàng ở kia.", en: "The bank is over there." } },
+      { han: "我", py: "wǒ", vi: "tôi", en: "I; me", ex: { cn: "我是学生。", py: "wǒ shì xuéshēng.", vi: "Tôi là học sinh.", en: "I am a student." } },
+      { han: "回", py: "huí", vi: "về", en: "to go back", ex: { cn: "我回家。", py: "wǒ huí jiā.", vi: "Tôi về nhà.", en: "I go home." } },
+      { han: "学校", py: "xuéxiào", vi: "trường học", en: "school", ex: { cn: "我们学校很大。", py: "wǒmen xuéxiào hěn dà.", vi: "Trường chúng tôi rất lớn.", en: "Our school is big." } },
+      { han: "再见", py: "zàijiàn", vi: "tạm biệt", en: "goodbye", ex: { cn: "老师，再见！", py: "lǎoshī, zàijiàn!", vi: "Thầy ơi, tạm biệt!", en: "Goodbye, teacher!" } },
+      { han: "对不起", py: "duìbuqǐ", vi: "xin lỗi", en: "sorry", ex: { cn: "对不起！", py: "duìbuqǐ!", vi: "Xin lỗi!", en: "Sorry!" } },
+      { han: "没关系", py: "méi guānxi", vi: "không sao", en: "it's okay; no problem", ex: { cn: "没关系。", py: "méi guānxi.", vi: "Không sao đâu.", en: "It's okay." } },
 
-  // ==== Bài 5 ====
-  { han: "这", py: "zhè", vi: "cái này", en: "this", ex: { cn: "这是谁？", py: "zhè shì shuí?", vi: "Đây là ai?", en: "Who is this?" } },
-  { han: "是", py: "shì", vi: "là", en: "to be (am, is, are)", ex: { cn: "我是老师。", py: "wǒ shì lǎoshī.", vi: "Tôi là giáo viên.", en: "I am a teacher." } },
-  { han: "老师", py: "lǎoshī", vi: "giáo viên", en: "teacher", ex: { cn: "他是我们的老师。", py: "tā shì wǒmen de lǎoshī.", vi: "Anh ấy là thầy của chúng tôi.", en: "He is our teacher." } },
-  { han: "您", py: "nín", vi: "ngài (kính ngữ của 你)", en: "you (polite form)", ex: { cn: "您好吗？", py: "nín hǎo ma?", vi: "Ngài khỏe không?", en: "How are you (polite)?" } },
-  { han: "请", py: "qǐng", vi: "mời", en: "please", ex: { cn: "请进。", py: "qǐng jìn.", vi: "Mời vào.", en: "Please come in." } },
-  { han: "进", py: "jìn", vi: "vào", en: "to enter", ex: { cn: "他进来了。", py: "tā jìn lái le.", vi: "Anh ấy đã vào rồi.", en: "He has come in." } },
-  { han: "坐", py: "zuò", vi: "ngồi", en: "to sit", ex: { cn: "请坐。", py: "qǐng zuò.", vi: "Mời ngồi.", en: "Please sit." } },
-  { han: "喝", py: "hē", vi: "uống", en: "to drink", ex: { cn: "请喝茶。", py: "qǐng hē chá.", vi: "Mời uống trà.", en: "Please have some tea." } },
-  { han: "茶", py: "chá", vi: "trà", en: "tea", ex: { cn: "我喜欢喝茶。", py: "wǒ xǐhuan hē chá.", vi: "Tôi thích uống trà.", en: "I like tea." } },
-  { han: "谢谢", py: "xièxie", vi: "cảm ơn", en: "thank you", ex: { cn: "谢谢你。", py: "xièxie nǐ.", vi: "Cảm ơn bạn.", en: "Thank you." } },
-  { han: "不客气", py: "bú kèqi", vi: "không có gì", en: "you're welcome", ex: { cn: "不客气！", py: "bú kèqi!", vi: "Không có gì!", en: "You're welcome!" } },
-  { han: "客气", py: "kèqi", vi: "khách sáo", en: "polite; courteous", ex: { cn: "不要客气。", py: "bú yào kèqi.", vi: "Đừng khách sáo.", en: "Don't be so polite." } },
-  { han: "工作", py: "gōngzuò", vi: "công việc", en: "work; job", ex: { cn: "你工作忙吗？", py: "nǐ gōngzuò máng ma?", vi: "Bạn có bận công việc không?", en: "Are you busy with work?" } },
-  { han: "身体", py: "shēntǐ", vi: "cơ thể; sức khỏe", en: "body; health", ex: { cn: "你身体好吗？", py: "nǐ shēntǐ hǎo ma?", vi: "Sức khỏe bạn tốt chứ?", en: "How is your health?" } },
-  { han: "十", py: "shí", vi: "mười", en: "ten", ex: { cn: "我有十块钱。", py: "wǒ yǒu shí kuài qián.", vi: "Tôi có mười đồng.", en: "I have ten yuan." } },
-  { han: "日", py: "rì", vi: "ngày", en: "day; sun", ex: { cn: "今天是几月几日？", py: "jīntiān shì jǐ yuè jǐ rì?", vi: "Hôm nay là ngày mấy tháng mấy?", en: "What's the date today?" } },
-  { han: "王", py: "Wáng", vi: "họ Vương", en: "Wang (a family name)", ex: { cn: "他姓王。", py: "tā xìng Wáng.", vi: "Anh ấy họ Vương.", en: "His surname is Wang." } }
-];
+      // ==== Bài 5 ====
+      { han: "这", py: "zhè", vi: "cái này", en: "this", ex: { cn: "这是谁？", py: "zhè shì shuí?", vi: "Đây là ai?", en: "Who is this?" } },
+      { han: "是", py: "shì", vi: "là", en: "to be (am, is, are)", ex: { cn: "我是老师。", py: "wǒ shì lǎoshī.", vi: "Tôi là giáo viên.", en: "I am a teacher." } },
+      { han: "老师", py: "lǎoshī", vi: "giáo viên", en: "teacher", ex: { cn: "他是我们的老师。", py: "tā shì wǒmen de lǎoshī.", vi: "Anh ấy là thầy của chúng tôi.", en: "He is our teacher." } },
+      { han: "您", py: "nín", vi: "ngài (kính ngữ của 你)", en: "you (polite form)", ex: { cn: "您好吗？", py: "nín hǎo ma?", vi: "Ngài khỏe không?", en: "How are you (polite)?" } },
+      { han: "请", py: "qǐng", vi: "mời", en: "please", ex: { cn: "请进。", py: "qǐng jìn.", vi: "Mời vào.", en: "Please come in." } },
+      { han: "进", py: "jìn", vi: "vào", en: "to enter", ex: { cn: "他进来了。", py: "tā jìn lái le.", vi: "Anh ấy đã vào rồi.", en: "He has come in." } },
+      { han: "坐", py: "zuò", vi: "ngồi", en: "to sit", ex: { cn: "请坐。", py: "qǐng zuò.", vi: "Mời ngồi.", en: "Please sit." } },
+      { han: "喝", py: "hē", vi: "uống", en: "to drink", ex: { cn: "请喝茶。", py: "qǐng hē chá.", vi: "Mời uống trà.", en: "Please have some tea." } },
+      { han: "茶", py: "chá", vi: "trà", en: "tea", ex: { cn: "我喜欢喝茶。", py: "wǒ xǐhuan hē chá.", vi: "Tôi thích uống trà.", en: "I like tea." } },
+      { han: "谢谢", py: "xièxie", vi: "cảm ơn", en: "thank you", ex: { cn: "谢谢你。", py: "xièxie nǐ.", vi: "Cảm ơn bạn.", en: "Thank you." } },
+      { han: "不客气", py: "bú kèqi", vi: "không có gì", en: "you're welcome", ex: { cn: "不客气！", py: "bú kèqi!", vi: "Không có gì!", en: "You're welcome!" } },
+      { han: "客气", py: "kèqi", vi: "khách sáo", en: "polite; courteous", ex: { cn: "不要客气。", py: "bú yào kèqi.", vi: "Đừng khách sáo.", en: "Don't be so polite." } },
+      { han: "工作", py: "gōngzuò", vi: "công việc", en: "work; job", ex: { cn: "你工作忙吗？", py: "nǐ gōngzuò máng ma?", vi: "Bạn có bận công việc không?", en: "Are you busy with work?" } },
+      { han: "身体", py: "shēntǐ", vi: "cơ thể; sức khỏe", en: "body; health", ex: { cn: "你身体好吗？", py: "nǐ shēntǐ hǎo ma?", vi: "Sức khỏe bạn tốt chứ?", en: "How is your health?" } },
+      { han: "十", py: "shí", vi: "mười", en: "ten", ex: { cn: "我有十块钱。", py: "wǒ yǒu shí kuài qián.", vi: "Tôi có mười đồng.", en: "I have ten yuan." } },
+      { han: "日", py: "rì", vi: "ngày", en: "day; sun", ex: { cn: "今天是几月几日？", py: "jīntiān shì jǐ yuè jǐ rì?", vi: "Hôm nay là ngày mấy tháng mấy?", en: "What's the date today?" } },
+      { han: "王", py: "Wáng", vi: "họ Vương", en: "Wang (a family name)", ex: { cn: "他姓王。", py: "tā xìng Wáng.", vi: "Anh ấy họ Vương.", en: "His surname is Wang." } }
+    ];
 
     // ======= State =======
     const state = { showPy:true, showVi:true, showEn:true, showEx:true, q:"" };
 
-    // ======= Elements =======
+    // ======= DOM =======
     const grid = document.getElementById('grid');
     const q = document.getElementById('q');
     const btnPy = document.getElementById('t-py');
@@ -238,7 +225,37 @@
     const btnEx = document.getElementById('t-ex');
     const count = document.getElementById('count');
 
-    function normal(s){return (s||"").toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');}
+    // ======= TTS helpers =======
+    const tts = {
+      voice: null,
+      ensureVoice(){
+        const pick = (voices) =>
+          voices.find(v => /Chinese|中文|普通话|CMN|zh/i.test(v.name+v.lang)) ||
+          voices.find(v => /zh/i.test(v.lang));
+        const voices = window.speechSynthesis.getVoices();
+        if(voices && voices.length) this.voice = pick(voices) || null;
+      },
+      speak(text){
+        if(!('speechSynthesis' in window)){
+          alert('Trình duyệt không hỗ trợ đọc to (Speech Synthesis).'); return;
+        }
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = (this.voice && this.voice.lang) || 'zh-CN';
+        if(this.voice) u.voice = this.voice;
+        u.rate = 0.95; // chậm dễ nghe
+        u.pitch = 1.0;
+        window.speechSynthesis.speak(u);
+      }
+    };
+    tts.ensureVoice();
+    window.speechSynthesis.onvoiceschanged = () => tts.ensureVoice();
+
+    // Safe diacritic stripping (broad browser support)
+    function normal(s){
+      return (s||"").toLowerCase().normalize('NFD')
+        .replace(/[\u0300-\u036f]/g,''); // remove common combining marks
+    }
 
     function render(){
       grid.innerHTML = '';
@@ -259,16 +276,32 @@
               <div class="mean ${state.showVi? '': 'hide'}">VI: ${it.vi}</div>
               <div class="mean ${state.showEn? '': 'hide'} muted">EN: ${it.en}</div>
             </div>
-            <span class="badge" title="Bấm để sao chép" role="button" tabindex="0">Sao chép</span>
+            <div class="icon-row">
+              <button class="icon-btn speak-word" title="Đọc chữ Hán">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 10v4h3l4 3V7L6 10H3z" stroke="#dbe5ff" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M16 8a5 5 0 0 1 0 8" stroke="#dbe5ff" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M18.5 5.5a8.5 8.5 0 0 1 0 13" stroke="#dbe5ff" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </button>
+              <span class="badge" title="Bấm để sao chép" role="button" tabindex="0">Sao chép</span>
+            </div>
           </div>
           <div class="ex ${state.showEx? '': 'hide'}">
-            <div class="cn">👉 例句：${it.ex.cn}</div>
+            <div class="cn">👉 例句：${it.ex.cn}
+              <button class="icon-btn speak-ex" title="Đọc ví dụ" style="margin-left:8px">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 10v4h3l4 3V7L6 10H3z" stroke="#bde7ff" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M16 8a5 5 0 0 1 0 8" stroke="#bde7ff" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
             <div class="py">/${it.ex.py}/</div>
             <div class="vi">${it.ex.vi}</div>
             <div class="en">${it.ex.en}</div>
           </div>
         `;
-        // Copy handler
+        // Copy
         card.querySelector('.badge').addEventListener('click', () => {
           const text = `${it.han} /${it.py}/ — ${it.vi} / ${it.en}\n例句：${it.ex.cn} /${it.ex.py}/ — ${it.ex.vi} / ${it.ex.en}`;
           navigator.clipboard.writeText(text).then(()=>{
@@ -277,6 +310,10 @@
             setTimeout(()=>{b.textContent=old; b.style.borderColor='rgba(255,255,255,.18)';}, 1200);
           });
         });
+        // Speak
+        card.querySelector('.speak-word').addEventListener('click', () => tts.speak(it.han));
+        card.querySelector('.speak-ex').addEventListener('click', () => tts.speak(it.ex.cn));
+
         grid.appendChild(card);
       });
       count.textContent = filtered.length;
@@ -284,15 +321,11 @@
 
     // ======= Events =======
     q.addEventListener('input', e => {state.q = e.target.value; render();});
-    function toggle(btn, key){
-      state[key] = !state[key];
-      btn.dataset.active = String(state[key]);
-      render();
-    }
-    btnPy.addEventListener('click', ()=> toggle(btnPy, 'showPy'));
-    btnVi.addEventListener('click', ()=> toggle(btnVi, 'showVi'));
-    btnEn.addEventListener('click', ()=> toggle(btnEn, 'showEn'));
-    btnEx.addEventListener('click', ()=> toggle(btnEx, 'showEx'));
+    const toggle = (btn,key) => { state[key]=!state[key]; btn.dataset.active=String(state[key]); render(); }
+    btnPy.addEventListener('click', ()=> toggle(btnPy,'showPy'));
+    btnVi.addEventListener('click', ()=> toggle(btnVi,'showVi'));
+    btnEn.addEventListener('click', ()=> toggle(btnEn,'showEn'));
+    btnEx.addEventListener('click', ()=> toggle(btnEx,'showEx'));
 
     // ======= Init =======
     render();
